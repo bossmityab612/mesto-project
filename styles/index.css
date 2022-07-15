@@ -14,6 +14,7 @@
 @import url('../blocks/profile/__description-main/_avatar/profile__description-main_avatar.css');
 @import url('../blocks/profile/__description-text/profile__description-text.css');
 @import url('../blocks/profile/__description-text/_name/profile__description-text_name.css');
+@import url('../blocks/profile/__description-text/_button/_edit/profile__description_button_edit.css');
 @import url('../blocks/profile/__description-text/_career/profile__description-text_career.css');
 @import url('../blocks/profile/__button/profile__button.css');/*  Кнопка добавления */
 @import url('../blocks/profile/__button/_add/_disabled/profile__button_add_disabled.css');
