@@ -1,0 +1,29 @@
+@import url('../vendor/normalize.css');
+@import url('../vendor/inter-font.css');
+@import url('../blocks/content/content.css');
+@import url('../blocks/page/page.css'); 
+
+/* ----------------Блок Лого------------- */
+@import url('../blocks/header/header.css');
+@import url('../blocks/header/__logo/header__logo.css');
+
+
+/* ------------Блок Профиль------------ */
+@import url('../blocks/profile/profile.css');
+@import url('../blocks/profile/__description-main/profile__description-main.css');
+@import url('../blocks/profile/__description-main/_avatar/profile__description-main_avatar.css');
+@import url('../blocks/profile/__description-text/profile__description-text.css');
+@import url('../blocks/profile/__description-text/_name/profile__description-text_name.css');
+@import url('../blocks/profile/__description-text/_career/profile__description-text_career.css');
+@import url('../blocks/profile/__button/profile__button.css');/*  Кнопка добавления */
+@import url('../blocks/profile/__button/_add/_disabled/profile__button_add_disabled.css');
+
+/* -------------Блок с публикациями------------- */
+@import url('../blocks/photo/photo.css');
+@import url('../blocks/photo/__pub/photo__pub.css');
+@import url('../blocks/photo/__pub/_elem/photo__pub_elem.css');
+@import url('../blocks/photo/__pub/_description-block/photo__pub_description-block.css');
+@import url('../blocks/photo/__pub/_description/_text/photo__pub_description_text.css');
+@import url('../blocks/photo/__pub/_description/_like/photo__pub_description_like.css');
+
+@import url('../blocks/copyright/copyright.css');

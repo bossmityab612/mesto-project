@@ -1,0 +1,5 @@
+.photo__pub_description {
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+}
