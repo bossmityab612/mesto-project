@@ -10,6 +10,7 @@
     <link rel="icon" href="./images/icon.ico">
 </head>
 <body class="content">
+
     <section class="header">
         <img src="./images/logo.svg" alt="Лого" class="header__logo">
     </section>
@@ -26,7 +27,7 @@
             <div class="profile__button">
                 <button class="profile__add-button"></button>
             </div>
-        </section>
+        </section>        
 
         <section class="photo">
             <div class="photo__pub">
@@ -78,7 +79,23 @@
                 </div>
             </div>
         </section>
-        <p class="copyright">© Анастасия Башкирова</p> 
+
+        <p class="copyright">© Анастасия Башкирова</p>
+        
+        <!-- Попап для заполения формы профиля -->
+        <div class="popup">
+            <div class="popup__container">
+                <div class="popup__container_form">
+                    <h2 class="popup__profile-edit">Редактрование профиля</h2>
+                    <form action="popup" class="popup__form">
+                        <input type="text" placeholder="Ваше имя" class="form popup__form_name">
+                        <input type="text" placeholder="О себе" class="form popup__form_about">
+                        <input type="button" value="Сохранить" class="popup__add-button"></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
     </main>
     <script src="./script.js"></script>
 </body>

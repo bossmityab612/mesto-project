@@ -28,3 +28,13 @@
 @import url('../blocks/photo/__pub/_description/_like/photo__pub_description_like.css');
 
 @import url('../blocks/copyright/copyright.css');
+
+/* ------Блок с всплывающим окном редактирования------- */
+@import url('../blocks/popup/popup.css');
+@import url('../blocks/popup/__container/popup__container.css');
+@import url('../blocks/popup/__container/_form/popup__container_form.css');
+@import url('../blocks/form/form.css');
+@import url('../blocks/popup/__form/_name/popup__form_name.css');
+@import url('../blocks/popup/__form/_about/popup__form_about.css');
+@import url('../blocks/popup/__profile-edit/popup__profile-edit.css');
+@import url('../blocks/popup/__add-button/popup__add-button.css');
