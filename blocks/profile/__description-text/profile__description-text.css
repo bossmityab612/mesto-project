@@ -1,3 +1,11 @@
 .profile__description-text {
     padding-left: 30px;
+    flex-direction: row;
+}
+
+@media screen and (max-width: 320px) {
+    .profile__description-text {
+        padding: 0;
+        text-align: center;
+    }
 }

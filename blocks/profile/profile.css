@@ -6,4 +6,13 @@
     justify-content: space-between;
     flex-direction: row;
     align-items: center;
+    border: 1px solid yellow;
+}
+
+@media screen and (max-width: 320px){
+    .profile {
+        display: grid;
+        border: 1px solid red;
+        justify-content: center;
+    }
 }

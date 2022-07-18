@@ -5,3 +5,11 @@
     font-weight: 400;
     margin: 0;
 }
+
+@media screen and (max-width: 320px) {
+    .profile__description-text_career {
+        font-size: 14px;
+        line-height: 16.94px;
+        padding-bottom: 36px;
+    }
+}
