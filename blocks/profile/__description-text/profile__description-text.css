@@ -3,7 +3,7 @@
     flex-direction: row;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 767px) {
     .profile__description-text {
         padding: 0;
         text-align: center;

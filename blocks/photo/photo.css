@@ -5,7 +5,7 @@
     justify-content: center;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 767px) {
     .photo {
         grid-template-columns: 282px;
     }
