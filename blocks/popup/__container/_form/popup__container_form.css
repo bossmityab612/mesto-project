@@ -3,3 +3,10 @@
     margin: auto;
     padding-top: 34px;
 }
+
+@media screen and (max-width: 767px) {
+    .popup__container_form {
+        max-width: 238px;
+        padding-top: 25px;
+    }
+}
