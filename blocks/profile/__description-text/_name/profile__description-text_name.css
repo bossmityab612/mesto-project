@@ -9,7 +9,6 @@
 
 @media screen and (max-width: 320px) {
     .profile__description-text_name {
-        border: 1px solid green;
         margin: 0;
         font-size: 27px;
         line-height: 32.68px;

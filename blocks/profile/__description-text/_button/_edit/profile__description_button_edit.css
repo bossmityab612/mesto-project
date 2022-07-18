@@ -1,3 +1,7 @@
+.profile__description_button_edit {
+    transition: opacity .15s;
+}
+
 .profile__description_button_edit:hover {
     opacity: .6;
 }

@@ -8,7 +8,6 @@
     .profile__description-main {
         display: flex;
         flex-direction: column;
-        border: 1px solid #fff;
         max-width: 282px;
     }
 }
