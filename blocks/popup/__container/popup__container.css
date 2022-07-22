@@ -1,5 +1,6 @@
 .popup__container {
     margin: 0 auto;
+    position: relative;
     display: block;
     text-align: left;
     background-color: #fff;

@@ -1,2 +1,2 @@
-console.log ('hello world');
-// alert('Приветульки! Это проверка');
+let popupOpened = popup.querySelector('.popup__container');
+
