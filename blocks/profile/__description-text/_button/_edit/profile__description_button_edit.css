@@ -1,5 +1,6 @@
 .profile__description_button_edit {
     transition: opacity .15s;
+    margin-left: 18px;
 }
 
 .profile__description_button_edit:hover {

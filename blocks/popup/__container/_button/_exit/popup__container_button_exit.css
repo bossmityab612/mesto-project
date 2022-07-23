@@ -1,5 +1,6 @@
 .popup__container_button_exit {
     display: block;
+    border: none;
     position: absolute;
     top: -32px;
     right: -32px;
