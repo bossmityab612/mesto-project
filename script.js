@@ -5,7 +5,7 @@ const popupButtonSubmit = popup.querySelector('.popup__add-button');
 
 // Открытие попапа
 function popupOpenToggle() {
-    popup.classList.toggle('popup_opened');
+    popup.classList.toggle('popup__opened');
 }
 
 function openPopup() {
@@ -17,11 +17,11 @@ function openPopup() {
     //присваивание value к тому, что будем вводить в строку
     popupName.value = editProfileTitle.textContent;
     popupJob.value = editProfileSubtitle.textContent;
-    popup.classList.add('popup_opened');
+    popup.classList.add('popup__opened');
 }
 
 
 // Закрытие попапа
 function closePopup() {
-    popup.classList.remove('popup_opened');
+    popup.classList.remove('popup__opened');
 }

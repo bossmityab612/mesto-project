@@ -1,4 +1,4 @@
-.popup__add-button {
+.popup__save-button {
     border: 1px solid #000;
     color: #fff;
     background-color: #000;
@@ -11,12 +11,12 @@
     cursor: pointer;
 }
 
-.popup__add-button:hover {
+.popup__save-button:hover {
     opacity: .5;
 }
 
 @media screen and (max-width: 767px) {
-    .popup__add-button {
+    .popup__save-button {
         margin: 0;
     }
 }
