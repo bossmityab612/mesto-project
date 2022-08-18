@@ -1,15 +1,12 @@
 .popup__container_button_exit {
     display: block;
     border: none;
+    color: #fff;
     position: absolute;
-    top: -32px;
-    right: -32px;
-    width: 32px;
-    height: 32px;
-    background-image: url('../../../../../images/Close\ Icon.png');
+    top: -68px;
+    right: -52px;
+    font-size: 68px;
     background-color: transparent;
-    background-repeat: no-repeat;
-    background-size: contain;
     cursor: pointer;
 }
 
