@@ -1,4 +1,4 @@
-.photo__pub_description_text {
+.photo__description-text {
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;

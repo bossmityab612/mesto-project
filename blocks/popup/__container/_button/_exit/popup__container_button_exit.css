@@ -1,13 +1,14 @@
 .popup__container_button_exit {
-    display: block;
+    display: inline-block;
     border: none;
     color: #fff;
     position: absolute;
-    top: -68px;
-    right: -52px;
-    font-size: 68px;
+    top: -40px;
+    right: -40px;
     background-color: transparent;
     cursor: pointer;
+    width: 32px;
+
 }
 
 .popup__container_button_exit:hover {
@@ -16,8 +17,8 @@
 
 @media screen and (max-width: 767px) {
     .popup__container_button_exit {
-        top: -48px;
+        top: -36px;
         right: 0;
-
+        width: 20px;
     }
 }

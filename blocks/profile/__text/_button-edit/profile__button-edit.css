@@ -1,0 +1,8 @@
+.profile__button-edit {
+    transition: opacity .15s;
+    margin-left: 18px;
+}
+
+.profile__button-edit:hover {
+    opacity: .6;
+}
