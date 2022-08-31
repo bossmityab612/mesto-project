@@ -1,0 +1,7 @@
+.popup-form {
+    border-color: transparent;
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
+    margin-top: 10px;
+    max-width: 352px;
+    padding: 0 0 10px 0;
+}
