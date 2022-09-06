@@ -1,5 +1,6 @@
 .popup__form-name {
     margin: 50px 0 30px;
+    font-size: 14px;
 }
 
 @media screen and (max-width: 767px) {
