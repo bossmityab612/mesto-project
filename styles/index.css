@@ -23,6 +23,7 @@
 @import url('../blocks/photo/photo.css');
 @import url('../blocks/photo/__pub/photo__pub.css');
 @import url('../blocks/photo/__item/photo__item.css');
+@import url('../blocks/photo/__description/photo__description.css');
 @import url('../blocks/photo/__description-block/photo__description-block.css');
 @import url('../blocks/photo/__description-text/photo__description-text.css');
 @import url('../blocks/photo/__like/photo__like.css');
