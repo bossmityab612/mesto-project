@@ -4,29 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./vendor/normalize.css">
-    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./pages/index.css">
     <title>Mesto</title>
     <link rel="icon" href="./images/icon.ico">
 </head>
 <body class="content">
 
-    <div class="header">
+    <header class="header">
         <img src="./images/logo.svg" alt="Лого" class="header__logo">
-    </div>
+    </header>
 
     <main class="page">
         <section class="profile">
             <div class="profile__info">
                 <img src="./images/Avatar.png" alt="Аватар" class="profile__info-avatar">
                 <div class="profile__text">
-                    <h1 class="profile__text-name">Жак-Ив Кусто <input type="image" src="./images/Edit.svg" alt="Кнопка редактирования" class="profile__button-edit"></h1>
+                    <h1 class="profile__text-name">Жак-Ив Кусто</h1>
                     <h2 class="profile__text-career">Исследователь океана</h2>
                 </div>
+                <button name="Редактос" type="_submit" src="./images/Edit.svg" class="profile__button-edit"></button>
             </div>
-            <div class="profile__button">
-                <button class="profile__add-button"></button>
-            </div>
+            
+            <button class="profile__add-button"></button>
         </section>        
 
         <section class="photo">
@@ -35,7 +34,7 @@
                 <div class="photo__description-block">
                     <div class="photo__description">
                         <h2 class="photo__description-text">Карачаевск</h2>
-                        <img src="./images/Vector.svg" alt="Лайкос" class="photo__like">
+                        <button type="submit" src="./images/Vector.svg" name="Лайкос" class="photo__like">
                     </div>
                 </div>
             </div>
@@ -44,7 +43,7 @@
                 <div class="photo__description-block">
                     <div class="photo__description">
                         <h2 class="photo__description-text">Карачаевск</h2>
-                        <img src="./images/Vector.svg" alt="Лайкос" class="photo__like">
+                        <button type="submit" src="./images/Vector.svg" name="Лайкос" class="photo__like">
                     </div>
                 </div>
             </div>
@@ -53,7 +52,7 @@
                 <div class="photo__description-block">
                     <div class="photo__description">
                         <h2 class="photo__description-text">Карачаевск</h2>
-                        <img src="./images/Vector.svg" alt="Лайкос" class="photo__like">
+                        <button type="submit" src="./images/Vector.svg" name="Лайкос" class="photo__like">
                     </div>
                 </div>
             </div>
@@ -62,7 +61,7 @@
                 <div class="photo__description-block">
                     <div class="photo__description">
                         <h2 class="photo__description-text">Карачаевск</h2>
-                        <img src="./images/Vector.svg" alt="Лайкос" class="photo__like">
+                        <button type="submit" src="./images/Vector.svg" name="Лайкос" class="photo__like">
                     </div>
                 </div>
             </div>
@@ -71,7 +70,7 @@
                 <div class="photo__description-block">
                     <div class="photo__description">
                         <h2 class="photo__description-text">Карачаевск</h2>
-                        <img src="./images/Vector.svg" alt="Лайкос" class="photo__like">
+                        <button type="submit" src="./images/Vector.svg" name="Лайкос" class="photo__like">
                     </div>
                 </div>
             </div>
@@ -80,19 +79,21 @@
                 <div class="photo__description-block">
                     <div class="photo__description">
                         <h2 class="photo__description-text">Карачаево-Черкессия</h2>
-                        <img src="./images/Vector.svg" alt="Лайкос" class="photo__like">
+                        <button type="submit" src="./images/Vector.svg" name="Лайкос" class="photo__like">
                     </div>
                 </div>
             </div>
         </section>
 
-        <p class="copyright">© Анастасия Башкирова</p>
+        <footer>
+            <p class="copyright">© Анастасия Башкирова</p>
+        </footer>
         
         <!-- Попап для заполнения формы профиля -->
         <div class="popup">
             <div class="popup__container">
 
-                <input src="./images/Close-Icon.png" alt="Закрывашка" type="image" class="popup__button-exit">
+                <button src="./images/Close-Icon.svg" type="submit" class="popup__button-exit">
                 <div class="popup__container-form">
                     <h2 class="popup__profile-edit">Редактировать профиль</h2>
                     <form action="popup" class="popup__form">
@@ -107,6 +108,6 @@
     </main>
 
     
-    <script src="./script.js"></script>
+    <script src="./script/script.js"></script>
 </body>
 </html>

@@ -14,9 +14,7 @@
 @import url('../blocks/profile/__text/profile__text.css');
 @import url('../blocks/profile/__text/_text-name/profile__text-name.css');
 @import url('../blocks/profile/__text/_text-career/profile__text-career.css');
-@import url('../blocks/profile/__text/_button-edit/profile__button-edit.css');
-@import url('../blocks/profile/__button/profile__button.css');
-@import url('../blocks/profile/__button/__add-button/profile__add-button.css');
+@import url('../blocks/profile/__add-button/profile__add-button.css');
 
 
 /* -------------Блок с публикациями------------- */
