@@ -1,4 +1,12 @@
 .photo__like {
-    margin: 0;
-    padding-right: 20px;
+    margin: 0 20px 0 0;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: opacity .15s;
+}
+
+.photo__like:hover {
+    opacity: .5;
 }
