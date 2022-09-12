@@ -7,10 +7,3 @@
     flex-direction: row;
     align-items: center;
 }
-
-@media screen and (max-width: 767px){
-    .profile {
-        display: grid;
-        justify-content: center;
-    }
-}
