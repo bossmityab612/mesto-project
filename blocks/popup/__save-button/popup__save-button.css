@@ -9,7 +9,7 @@
     width: 358px;
     border-radius: 2px; /*Стиль border-radius и так был добавлен. Не понимаю, в суть замечания*/
     cursor: pointer;
-    margin: 6px auto 37px;
+    margin: 0 auto 37px;
 }
 
 .popup__save-button:hover {
