@@ -1,3 +1,6 @@
 .content {
     background-color: #000000;
+    min-width: 320px;
+    margin: 0 auto;
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
 }

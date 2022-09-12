@@ -7,13 +7,13 @@
     line-height: 21.78px;
     height: 50px;
     width: 358px;
-    border-radius: 2px;
+    border-radius: 2px; /*Стиль border-radius и так был добавлен. Не понимаю, в суть замечания*/
     cursor: pointer;
     margin: 6px auto 37px;
 }
 
 .popup__save-button:hover {
-    opacity: .5;
+    opacity: .8;
 }
 
 @media screen and (max-width: 767px) {
