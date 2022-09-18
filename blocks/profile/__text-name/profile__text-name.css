@@ -8,7 +8,6 @@
 
 @media screen and (max-width: 767px) {
     .profile__text-name {
-        margin: 0;
         font-size: 27px;
         line-height: 32.68px;
         padding: 26px 0 14px;

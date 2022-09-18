@@ -13,8 +13,8 @@
 @import url('../blocks/profile/__info-avatar/profile__info-avatar.css');
 @import url('../blocks/profile/__text/profile__text.css');
 @import url('../blocks/profile/__name-button-group/profile__name-button-group.css');
-@import url('../blocks/profile/__text/_text-name/profile__text-name.css');
-@import url('../blocks/profile/__text/_text-career/profile__text-career.css');
+@import url('../blocks/profile/__text-name/profile__text-name.css');
+@import url('../blocks/profile/__text-career/profile__text-career.css');
 @import url('../blocks/profile/__button-edit/profile__button-edit.css');
 @import url('../blocks/profile/__add-button/profile__add-button.css');
 
