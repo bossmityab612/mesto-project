@@ -2,8 +2,20 @@
     color: #fff;
     max-width: 880px;
     margin: 40px auto 50px;
-    display: flex;
+    display: grid;
+    grid-template-areas: 
+        'profile__info profile__add-button';
     justify-content: space-between;
     flex-direction: row;
     align-items: center;
+}
+
+@media screen and (max-width: 1023px) {
+    .profile {
+        grid-template-areas: 
+            'profile__info'
+            'profile__add-button';
+        justify-items: center;
+        justify-content: center;
+    }
 }
