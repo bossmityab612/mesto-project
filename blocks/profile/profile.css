@@ -10,7 +10,7 @@
     align-items: center;
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 767px) {
     .profile {
         grid-template-areas: 
             'profile__info'
