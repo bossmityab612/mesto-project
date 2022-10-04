@@ -17,5 +17,7 @@
             'profile__add-button';
         justify-items: center;
         justify-content: center;
+        max-width: 282px;
+        margin: 42px auto 36px;
     }
 }
