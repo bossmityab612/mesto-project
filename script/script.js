@@ -3,6 +3,10 @@ const popup = document.querySelector('.popup__container');
 const openPopupButton = document.querySelectorAll('.profile__button-edit'); //Кнопка открытия попапа
 const closePopupButton = document.querySelector('.popup__button-exit'); //Кнопка закрытия попапа
 
+const popupForm = document.querySelector('.popup__form');
+const nameInput = document.querySelector('.popup__form_name');
+const jobInput = document.querySelector('.popup__form_job');
+
 openPopupButton.forEach((button) => {
         button.addEventListener('click', (popup) => {
                 popup.preventDefault();
@@ -14,6 +18,10 @@ openPopupButton.forEach((button) => {
 closePopupButton.addEventListener('click',() => {
         popupOpened.classList.remove('popup__opened');
         popup.classList.remove('popup__opened');
-    });
+});
 
+function formSubmitHandler (evt) {
+    evt.preventDefault();
+}
 
+formElement.addEventListener('submit', formSubmitHandler);
