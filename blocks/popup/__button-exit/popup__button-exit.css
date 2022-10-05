@@ -1,13 +1,14 @@
 .popup__button-exit {
-    display: inline-block;
-    border: none;
-    color: #fff;
+    background-image: url('../../../images/Close-Icon.svg');
+    background-size: cover;
     position: absolute;
+    border: none;
     top: -41px;
     right: -34px;
     background-color: transparent;
     cursor: pointer;
     width: 32px;
+    height: 32px;
 
 }
 
@@ -20,5 +21,6 @@
         top: -36px;
         right: 0;
         width: 20px;
+        height: 20px;
     }
 }
