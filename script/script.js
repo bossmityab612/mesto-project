@@ -1,19 +1,22 @@
-const popupOpened = document.querySelector('.popup'); //Всплывающее окно
-const popup = document.querySelector('.popup__container');
-const openPopupButton = document.querySelectorAll('.profile__button-edit'); //Кнопка открытия попапа
-const closePopupButton = document.querySelector('.popup__button-exit'); //Кнопка закрытия попапа
+// const popupOpened = document.querySelector('.popup'); //Всплывающее окно
+// const popup = document.querySelector('.popup__container');
+// const openPopupButton = document.querySelectorAll('.profile__button-edit'); //Кнопка открытия попапа
+// const closePopupButton = document.querySelector('.popup__button-exit'); //Кнопка закрытия попапа
+const popup = document.querySelector('popup');
 
-openPopupButton.forEach((button) => {
-    button.addEventListener('click', (e) => {
-        e.preventDefault();
-        popupOpened.classList.add('popup__opened');
-        popup.classList.add('popup__opened');
-    })
-});
+popup.classList.toggle('popup__opened', true);
 
-closePopupButton.addEventListener('click',() => {
-        popupOpened.classList.remove('popup__opened');
-        popup.classList.remove('popup__opened');
-    });
+// openPopupButton.forEach((button) => {
+//     button.addEventListener('click', (popup) => {
+//         popup.preventDefault();
+//         popupOpened.classList.add('popup__opened');
+//         popup.classList.add('popup__opened');
+//     })
+// });
+
+// closePopupButton.addEventListener('click',() => {
+//         popupOpened.classList.remove('popup__opened');
+//         popup.classList.remove('popup__opened');
+//     });
 
 
