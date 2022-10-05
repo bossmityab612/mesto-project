@@ -15,3 +15,5 @@ closePopupButton.addEventListener('click',() => {
         popupOpened.classList.remove('popup__opened');
         popup.classList.remove('popup__opened');
     });
+
+
