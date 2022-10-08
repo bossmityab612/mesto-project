@@ -4,8 +4,8 @@ const openPopupButton = document.querySelectorAll('.profile__button-edit'); //К
 const closePopupButton = document.querySelector('.popup__button-exit'); //Кнопка закрытия попапа
 
 const popupForm = document.querySelector('.popup__form');
-const nameInput = document.querySelector('.popup__form_name');
-const jobInput = document.querySelector('.popup__form_job');
+const nameInput = document.querySelector('.popup-form-name');
+const jobInput = document.querySelector('.popup-form-job');
 
 openPopupButton.forEach((button) => {
         button.addEventListener('click', (popup) => {
