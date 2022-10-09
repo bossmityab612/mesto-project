@@ -1,7 +1,7 @@
 .profile__text-name {
     font-size: 42px;
     font-family: 'Inter', Arial, Helvetica, sans-serif;
-    font-style: medium;
+    font-style: normal;
     line-height: 48px;
     font-weight: 500;
     margin: 0;
@@ -10,7 +10,7 @@
 @media screen and (max-width: 767px) {
     .profile__text-name {
         font-size: 27px;
-        line-height: 32.68px;
+        line-height: 33px;
         padding: 26px 0 14px;
     }
 }
