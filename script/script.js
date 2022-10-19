@@ -2,34 +2,28 @@ const popup = document.querySelector('.popup'); //Всплывающее окн�
 const openPopupButton = document.querySelector('.profile__button-edit'); //Кнопка открытия попапа
 const closePopupButton = document.querySelector('.popup__button-exit'); //Кнопка закрытия попапа
 
-const editButton = document.querySelector('.profile__button-edit')
-const popupForm = document.querySelector('.popup__form');
-const nameInput = document.querySelector('.popup-form_name');
-const jobInput = document.querySelector('.popup-form_job');
+const popupForm = document.querySelector('.popup__form'); //Поле формы
+const nameInput = document.querySelector('.profile__text-name'); //Поле имени
+const jobInput = document.querySelector('.profile__text-career'); //Поле профессии
+const nameForm = document.querySelector('.popup-form_name'); // Форма заполнения имени
+const jobForm = document.querySelector('.popup-form_job'); //Форма заполнения профессии
+
 
 openPopupButton.addEventListener('click', () => {
-        popup.classList.add('popup_opened');
         popup.classList.add('popup_opened');
 })
 
 closePopupButton.addEventListener('click',() => {
         popup.classList.remove('popup_opened');
-        popup.classList.remove('popup_opened');
 });
 
-editButton.addEventListener('click', () => {
-        const userData = userInfo.getUserInfo();
-        nameInput.value = userData.name;
-        jobInput.value = userData.job;
-      
-        formValidators['profile'].resetValidation()
-      
-        profilePopup.open();
-      });
+function formSubmitHandler(evt) {
+        evt.preventDefault();
+        nameInput.textContent = nameForm.value;
+        jobInput.textContent = jobForm.value;
 
-// function formSubmitHandler (evt) {
-//     evt.preventDefault();
-// }
+        popup.classList.remove('popup_opened');
+}
 
-// popupForm.addEventListener('submit', formSubmitHandler);
+popupForm.addEventListener('submit', formSubmitHandler);
 
