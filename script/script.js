@@ -17,6 +17,8 @@ closePopupButton.addEventListener('click',() => {
         popup.classList.remove('popup_opened');
 });
 
+output.textContent = number;
+
 function formSubmitHandler(evt) {
         evt.preventDefault();
         nameInput.textContent = nameForm.value;
