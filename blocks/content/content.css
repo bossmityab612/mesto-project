@@ -3,4 +3,7 @@
     min-width: 320px;
     margin: 0 auto;
     font-family: 'Inter', Arial, Helvetica, sans-serif;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
 }
