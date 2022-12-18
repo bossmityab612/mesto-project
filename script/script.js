@@ -26,11 +26,7 @@ function formSubmitHandler(evt) {
         nameInput.textContent = nameForm.value;
         jobInput.textContent = jobForm.value;
         
-        name: nameInput.textContent;
-        job: jobInput.textContent;
         popup.classList.remove('popup_opened');
 }
 popupForm.addEventListener('submit', formSubmitHandler);
-
-// Автозаполнение формы
 
