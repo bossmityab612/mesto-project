@@ -8,6 +8,7 @@ const jobInput = document.querySelector('.profile__text-career'); //Поле п�
 const nameForm = document.querySelector('.popup-form_name'); // Форма заполнения имени
 const jobForm = document.querySelector('.popup-form_job'); //Форма заполнения профессии
 
+// Открытие и закрытие попапа
 
 openPopupButton.addEventListener('click', () => {
         popup.classList.add('popup_opened');
@@ -17,15 +18,19 @@ closePopupButton.addEventListener('click',() => {
         popup.classList.remove('popup_opened');
 });
 
-output.textContent = number;
+
+// Обработчик формы
 
 function formSubmitHandler(evt) {
         evt.preventDefault();
         nameInput.textContent = nameForm.value;
         jobInput.textContent = jobForm.value;
-
+        
+        name: nameInput.textContent;
+        job: jobInput.textContent;
         popup.classList.remove('popup_opened');
 }
-
 popupForm.addEventListener('submit', formSubmitHandler);
+
+// Автозаполнение формы
 

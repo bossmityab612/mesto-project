@@ -1,9 +1,6 @@
 .profile__text {
-    text-overflow: ellipsis;
     white-space: nowrap;
-    overflow: hidden;
-    /* max-width: 294px; */
-    width: 100%;
+    max-width: 336px;
     padding-left: 30px;
     flex-direction: row;
 }
