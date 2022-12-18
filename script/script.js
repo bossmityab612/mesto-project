@@ -12,20 +12,25 @@ const jobForm = document.querySelector('.popup-form_job'); //Форма запо
 
 openPopupButton.addEventListener('click', () => {
         popup.classList.add('popup_opened');
+        nameForm.value = nameInput.textContent;
+        jobForm.value = jobInput.textContent;
 })
 
 closePopupButton.addEventListener('click',() => {
         popup.classList.remove('popup_opened');
 });
 
-
 // Обработчик формы
 
 function formSubmitHandler(evt) {
         evt.preventDefault();
+
+        name: 'nameInput';
+        job: 'jobInput';
+
         nameInput.textContent = nameForm.value;
         jobInput.textContent = jobForm.value;
-        
+
         popup.classList.remove('popup_opened');
 }
 popupForm.addEventListener('submit', formSubmitHandler);
