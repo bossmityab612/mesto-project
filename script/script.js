@@ -24,10 +24,6 @@ closePopupButton.addEventListener('click',() => {
 
 function formSubmitHandler(evt) {
         evt.preventDefault();
-
-        name: 'nameInput';
-        job: 'jobInput';
-
         nameInput.textContent = nameForm.value;
         jobInput.textContent = jobForm.value;
 
