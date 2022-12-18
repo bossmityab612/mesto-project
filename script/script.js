@@ -5,8 +5,8 @@ const closePopupButton = document.querySelector('.popup__button-exit'); //Кно
 const popupForm = document.querySelector('.popup__form'); //Поле формы
 const nameInput = document.querySelector('.profile__text-name'); //Поле имени
 const jobInput = document.querySelector('.profile__text-career'); //Поле профессии
-const nameForm = document.querySelector('.popup-form_name'); // Форма заполнения имени
-const jobForm = document.querySelector('.popup-form_job'); //Форма заполнения профессии
+const nameForm = document.querySelector('.popup__form-name'); // Форма заполнения имени
+const jobForm = document.querySelector('.popup__form-job'); //Форма заполнения профессии
 
 // Открытие и закрытие попапа
 
