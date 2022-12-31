@@ -25,6 +25,7 @@
 @import url('../blocks/photo/__description/photo__description.css');
 @import url('../blocks/photo/__description-text/photo__description-text.css');
 @import url('../blocks/photo/__like/photo__like.css');
+@import url('../blocks/photo/__like/_active/photo__like_active.css');
 
 @import url('../blocks/copyright/copyright.css');
 
