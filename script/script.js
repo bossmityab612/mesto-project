@@ -1,10 +1,10 @@
 const popup = document.querySelector('.popup'); //Всплывающее окно
 const openPopupButton = document.querySelector('.profile__button-edit'); //Кнопка открытия попапа
 const closePopupButton = document.querySelector('.popup__button-exit'); //Кнопка закрытия попапа
-const popupAddForm = document.querySelector('.popup-add-photo'); //Всплывающее окно
-const openPopupButtonAddForm = document.querySelectorAll('.profile__add-button'); //Кнопка открытия попапа (для формы добавления)
-const closePopupButtonAddForm = document.querySelectorAll('.popup__button-exit'); //Кнопка закрытия попапа
 
+const popupAddForm = document.querySelector('.popup-add-photo'); //Всплывающее окно
+const openPopupButtonAddForm = document.querySelector('.profile__add-button'); //Кнопка открытия попапа (для формы добавления)
+const closePopupButtonAddForm = document.querySelector('.popup__button-exit-addform'); //Кнопка закрытия попапа
 
 const deletePub = document.querySelectorAll('.photo__trash'); // Кнопка удаления
 const publication = document.querySelectorAll('.photo__pub'); // Публикация
@@ -43,7 +43,7 @@ closePopupButton.addEventListener('click',() => {
 // Открытие и закрытие попапа (форма добавления фото)
 
 openPopupButtonAddForm.addEventListener('click', () => {
-        openPopupButton();
+        popupAddForm.classList.add('popup_opened');
 });
 
 closePopupButtonAddForm.addEventListener('click', () => {

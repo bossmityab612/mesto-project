@@ -1,0 +1,26 @@
+.popup__button-exit-addform {
+    background-image: url('../../../images/Close-Icon.svg');
+    background-size: cover;
+    position: absolute;
+    border: none;
+    top: -41px;
+    right: -34px;
+    background-color: transparent;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+
+}
+
+.popup__button-exit-addform:hover {
+    opacity: .6;
+}
+
+@media screen and (max-width: 767px) {
+    .popup__button-exit {
+        top: -36px;
+        right: 0;
+        width: 20px;
+        height: 20px;
+    }
+}
