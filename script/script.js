@@ -1,72 +1,63 @@
 // Массив Шесть карточек «из коробки»
 
-// const initialCards = [
-//         {
-//           name: 'Архыз',
-//           link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
-//         },
-//         {
-//           name: 'Челябинская область',
-//           link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg'
-//         },
-//         {
-//           name: 'Иваново',
-//           link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg'
-//         },
-//         {
-//           name: 'Камчатка',
-//           link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg'
-//         },
-//         {
-//           name: 'Холмогорский район',
-//           link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg'
-//         },
-//         {
-//           name: 'Байкал',
-//           link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
-//         }
-//       ];
+const initialCards = [
+	{
+		name: 'Архыз',
+		link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
+	},
+	{
+		name: 'Челябинская область',
+		link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg'
+	},
+	{
+		name: 'Иваново',
+		link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg'
+	},
+	{
+		name: 'Камчатка',
+		link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg'
+	},
+	{
+		name: 'Холмогорский район',
+		link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg'
+	},
+	{
+		name: 'Байкал',
+		link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
+	}
+];
 
 // console.log(initialCards);
 
-const todos = [
-        'первый пункт',
-        'второй пункт',
-        'третий пункт',
-        'четвертый пункт',
-        'пятый пункт'
-];
+const sectionPhotoPub = document.querySelector('.photo');
+const containerCards = document.querySelector('.photo__pub');
 
-const todoContainer = document.querySelector('.todos__list')
-const addTodoForm = document.querySelector('.todo-form')
+const createCard = ({name, link}) => {
+	return `<div class="photo__pub">
+						<button type="button" class="photo__trash"></button>
+						<img src="./images/photos/kara.png" alt="Фото" class="photo__item">${link}
+						<div class="photo__description">
+								<h2 class="photo__description-text">${name}</h2>
+								<button type="button" class="photo__like"></button>
+						</div>
+					</div>`;
+};
 
-const createTodo = (taskName) => {
-        const string = `<li class="todo-item">
-                        <span class="todo-item__text"></span>
-                        <button class="todo-item__edit"></button>
-                        <button class="todo-item__copy"></button>
-                        <button class="todo-item__del"></button>
-                        </li>`
-}
+const renderCards = (taskName) => {
+	containerCards.insertAdjacentHTML('beforebegin', createCard(taskName));
+};
 
-const renderTodo = (taskName) => {
-        todoContainer.insertAdjacentHTML('beforeend', createTodo(taskName))
-}
-
-todos.forEach((title) => {
-        renderTodo(title);
+initialCards.forEach((title) => {
+	renderCards(title);
 });
 
-const addTodo = (event) => {
-        event.preventDefault();
+const cards = (evt) => {
+	evt.preventDefault();
+	const description = input.value;
+	renderCards(description);
 }
-addTodoForm.addEventListener('submit', addTodo);
 
-// todoContainer.append(...todos.map((taskName) => {
-//         return createTodo(taskName);
-// }));
-
-
+sectionPhotoPub.addEventListener('submit', cards);
 
 const popup = document.querySelector('.popup'); //Всплывающее окно
 const openPopupButton = document.querySelector('.profile__button-edit'); //Кнопка открытия попапа
@@ -91,44 +82,44 @@ const jobForm = document.querySelector('.popup__form-job'); //Форма зап�
 
 // Функция для лайков
 
-like.forEach(function(el) {
-        el.addEventListener('click', (evt) => {
-                evt.target.classList.toggle('photo__like_active');
-        });
+like.forEach(function (el) {
+	el.addEventListener('click', (evt) => {
+		evt.target.classList.toggle('photo__like_active');
+	});
 });
 
 
 // Открытие и закрытие попапа
 
 openPopupButton.addEventListener('click', () => {
-        popup.classList.add('popup_opened');
-        nameForm.value = nameInput.textContent;
-        jobForm.value = jobInput.textContent;
+	popup.classList.add('popup_opened');
+	nameForm.value = nameInput.textContent;
+	jobForm.value = jobInput.textContent;
 });
 
 
-closePopupButton.addEventListener('click',() => {
-        popup.classList.remove('popup_opened');
+closePopupButton.addEventListener('click', () => {
+  popup.classList.remove('popup_opened');
 });
 
 // Открытие и закрытие попапа (форма добавления фото)
 
 openPopupButtonAddForm.addEventListener('click', () => {
-        popupAddForm.classList.add('popup_opened');
+  popupAddForm.classList.add('popup_opened');
 });
 
 closePopupButtonAddForm.addEventListener('click', () => {
-        popupAddForm.classList.remove('popup_opened');
+  popupAddForm.classList.remove('popup_opened');
 });
 
 // Обработчик формы
 
 function formSubmitHandler(evt) {
-        evt.preventDefault();
-        nameInput.textContent = nameForm.value;
-        jobInput.textContent = jobForm.value;
-        
-        popup.classList.remove('popup_opened');
+	evt.preventDefault();
+	nameInput.textContent = nameForm.value;
+	jobInput.textContent = jobForm.value;
+
+	popup.classList.remove('popup_opened');
 }
 popupForm.addEventListener('submit', formSubmitHandler);
 
@@ -138,8 +129,8 @@ popupForm.addEventListener('submit', formSubmitHandler);
 //         delPub.closest('.photo__pub').remove();
 // });
 
-delPub.forEach(function(el) {
-        el.addEventListener('click', (evt) => {
-                delPub.closest('.photo__pub').remove();
-        });
+delPub.forEach(function (el) {
+	el.addEventListener('click', (evt) => {
+		delPub.closest('.photo__pub').remove();
+	});
 });

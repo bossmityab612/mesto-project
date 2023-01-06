@@ -80,22 +80,40 @@
             </div>
         </section> -->
         
-        <!-- <template id="todo-item-template">
-            <li class="todo-item">
+        <template id="todo-item-template">
+            <!-- <li class="todo-item">
                 <span class="todo-item__text"></span>
-                <button class="todo-item__edit">Кнопочка 1</button>
-                <button class="todo-item__copy">Кнопочка 2</button>
-                <button class="todo-item__del">Кнопочка 3</button>
-            </li>
-        </template> -->
+                <button class="todo-item__edit"></button>
+                <button class="todo-item__copy"></button>
+                <button class="todo-item__del"></button>
+            </li> -->
+            <div class="photo__pub">
+                <button type="button" class="photo__trash"></button>
+                <img src="./images/photos/kara.png" alt="Фото" class="photo__item">
+                <div class="photo__description">
+                    <h2 class="photo__description-text">Карачаево-Черкессия</h2>
+                    <button type="button" class="photo__like"></button>
+                </div>
+            </div>
+        </template>
 
         <section class="todos">
             <form name="todo-form" class="todo-form"></form>
-            <ul class="todos__list"></ul>
+            <div class="photo__pub"></div>
         </section>
 
         <!-- Карточки с местами -->
-        <section class="elements"></section>
+
+        <!-- <template class="template">
+            <div class="element">
+              <button class="element__del" type="button"></button>
+              <img class="element__image" alt="">
+              <div class="element__description">
+                <h2 class="element__image-title"></h2>
+                <button class="element__like" type="button"></button>
+              </div>
+            </div>
+        </template> -->
         
     </main>
     
@@ -125,8 +143,8 @@
             <div class="popup__container-form">
                 <h2 class="popup__title">Новое место</h2>
                 <form action="popup" name="popup-form" class="popup__form">
-                    <input name="name" type="text" placeholder="Название" class="popup__form-name">
-                    <input name="job" type="text" placeholder="Ссылка на картинку" class="popup__form-job">
+                    <input name="place" type="text" placeholder="Название" class="popup__form-name">
+                    <input name="link" type="text" placeholder="Ссылка на картинку" class="popup__form-job">
                     <button type="submit" class="popup__save-button">Создать</button>
                 </form>
             </div>
