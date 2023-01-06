@@ -42,3 +42,9 @@
 @import url('../blocks/popup/__form/popup__form.css');
 @import url('../blocks/popup/__title/popup__title.css');
 @import url('../blocks/popup/__save-button/popup__save-button.css');
+
+@import url('../blocks/image/image.css');
+@import url('../blocks/image/__subtitle/image__subtitle.css');
+@import url('../blocks/image/__button-exit-image/popup__button-exit-image.css');
+
+@import url('../blocks/photo/todos__list.css');
