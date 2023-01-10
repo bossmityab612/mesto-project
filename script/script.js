@@ -49,25 +49,24 @@ const nameForm = document.querySelector('.popup__form-name'); // Форма за
 const jobForm = document.querySelector('.popup__form-job'); //Форма заполнения профессии
 
 const containerPhoto = document.querySelector('.elements');
+const templateForm = document.querySelector('#template');
 
 const createCard = (taskName) => {
-	const templateForm = document.querySelector('#template');
-	
 	const element = templateForm.content.querySelector('.element').cloneNode(true); //Клонируем содержимое тега <template>
-	containerPhoto.append(createCard(taskName));
-
+	
 	return element;
 };
 
 const renderCards = (taskName) => {
 	containerPhoto.append(createCard(taskName));
+	return containerPhoto;
 };
 
 containerPhoto.append(...initialCards.map((taskName) => {
 	createCard(taskName);
 }));
 
-// sectionPhotoPub.addEventListener('submit', cards);
+containerPhoto.addEventListener('submit', cards);
 
 // Открытие и закрытие попапа
 
