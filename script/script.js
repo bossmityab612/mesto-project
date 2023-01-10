@@ -52,9 +52,12 @@ const containerPhoto = document.querySelector('.elements');
 const templateForm = document.querySelector('#template');
 
 const createCard = (taskName) => {
+	const templateForm = document.querySelector('#template');
 	const element = templateForm.content.querySelector('.element').cloneNode(true); //Клонируем содержимое тега <template>
-	
-	return element;
+	element.querySelector('.element__photo').src = taskName.link;
+	element.querySelector('.element__description-text').textContent = taskName.name;
+	containerPhoto.append(element);
+	return;
 };
 
 const renderCards = (taskName) => {
@@ -62,7 +65,7 @@ const renderCards = (taskName) => {
 	return containerPhoto;
 };
 
-containerPhoto.append(...initialCards.map((taskName) => {
+containerPhoto.append(initialCards.map((taskName) => {
 	createCard(taskName);
 }));
 
