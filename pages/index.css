@@ -19,7 +19,7 @@
 @import url('../blocks/profile/__add-button/profile__add-button.css');
 
 /* -------------Блок с публикациями------------- */
-@import url('../blocks/elements/element.css');
+@import url('../blocks/elements/elements.css');
 @import url('../blocks/element/element.css');
 @import url('../blocks/elements/__photo/element__photo.css');
 @import url('../blocks/elements/__close/element__close.css');

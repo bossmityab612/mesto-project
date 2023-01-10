@@ -25,10 +25,7 @@ const initialCards = [
 		name: 'Байкал',
 		link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
 	}
-];
-
-// console.log(initialCards);
-
+];	
 
 const popup = document.querySelector('.popup'); //Всплывающее окно
 const openPopupButton = document.querySelector('.profile__button-edit'); //Кнопка открытия попапа
@@ -38,8 +35,6 @@ const popupAddForm = document.querySelector('.popup-add-photo'); //Всплыв�
 const openPopupButtonAddForm = document.querySelector('.profile__add-button'); //Кнопка открытия попапа (для формы добавления)
 const closePopupButtonAddForm = document.querySelector('.popup__button-exit-addform'); //Кнопка закрытия попапа
 
-//const photoSection = document.querySelector('.photo') //Секция с публикациями
-//const publication = document.querySelector('.photo__pub'); // Публикация
 const delPub = document.querySelector('.element__close'); // Кнопка удаления
 
 const popupForm = document.querySelector('.popup__form'); //Поле формы
@@ -47,29 +42,6 @@ const nameInput = document.querySelector('.profile__text-name'); //Поле им
 const jobInput = document.querySelector('.profile__text-career'); //Поле профессии
 const nameForm = document.querySelector('.popup__form-name'); // Форма заполнения имени
 const jobForm = document.querySelector('.popup__form-job'); //Форма заполнения профессии
-
-const containerPhoto = document.querySelector('.elements');
-const templateForm = document.querySelector('#template');
-
-const createCard = (taskName) => {
-	const templateForm = document.querySelector('#template');
-	const element = templateForm.content.querySelector('.element').cloneNode(true); //Клонируем содержимое тега <template>
-	element.querySelector('.element__photo').src = taskName.link;
-	element.querySelector('.element__description-text').textContent = taskName.name;
-	containerPhoto.append(element);
-	return;
-};
-
-const renderCards = (taskName) => {
-	containerPhoto.append(createCard(taskName));
-	return containerPhoto;
-};
-
-containerPhoto.append(initialCards.map((taskName) => {
-	createCard(taskName);
-}));
-
-containerPhoto.addEventListener('submit', cards);
 
 // Открытие и закрытие попапа
 
@@ -104,6 +76,39 @@ function formSubmitHandler(evt) {
 	popup.classList.remove('popup_opened');
 }
 popupForm.addEventListener('submit', formSubmitHandler);
+
+const containerPhoto = document.querySelector('.elements');
+const templateForm = document.querySelector('#template');
+
+const createCard = (taskName) => {
+	const templateForm = document.querySelector('#template');
+	const element = templateForm.content.querySelector('.element').cloneNode(true); //Клонируем содержимое тега <template>
+	element.querySelector('.element__photo').src = taskName.link;
+	element.querySelector('.element__description-text').textContent = taskName.name;
+	containerPhoto.append(element);
+
+	return;
+};
+
+const like = document.querySelectorAll('.element__like');
+like.forEach(function(el) {
+	el.addEventListener('click', function(evt) {
+		evt.target.classList.toggle('element__like_active');
+	});
+});
+
+const renderCards = (taskName) => {
+	containerPhoto.append(createCard(taskName));
+	return containerPhoto;
+};
+
+containerPhoto.append(initialCards.map((taskName) => {
+	createCard(taskName);
+}));
+
+// containerPhoto.addEventListener('submit', element);
+
+
 
 // Удаление публикации
 
