@@ -19,14 +19,14 @@
 @import url('../blocks/profile/__add-button/profile__add-button.css');
 
 /* -------------Блок с публикациями------------- */
-@import url('../blocks/photo/photo.css');
-@import url('../blocks/photo/__pub/photo__pub.css');
-@import url('../blocks/photo/__item/photo__item.css');
-@import url('../blocks/photo/__trash/photo__trash.css');
-@import url('../blocks/photo/__description/photo__description.css');
-@import url('../blocks/photo/__description-text/photo__description-text.css');
-@import url('../blocks/photo/__like/photo__like.css');
-@import url('../blocks/photo/__like/_active/photo__like_active.css');
+@import url('../blocks/elements/element.css');
+@import url('../blocks/element/element.css');
+@import url('../blocks/elements/__photo/element__photo.css');
+@import url('../blocks/elements/__close/element__close.css');
+@import url('../blocks/elements/__description/element__description.css');
+@import url('../blocks/elements/__description-text/element__description-text.css');
+@import url('../blocks/elements/__like/element__like.css');
+@import url('../blocks/elements/__like/_active/element__like_active.css');
 
 @import url('../blocks/copyright/copyright.css');
 
@@ -46,5 +46,3 @@
 @import url('../blocks/image/image.css');
 @import url('../blocks/image/__subtitle/image__subtitle.css');
 @import url('../blocks/image/__button-exit-image/popup__button-exit-image.css');
-
-@import url('../blocks/photo/todos__list.css');

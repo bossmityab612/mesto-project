@@ -29,35 +29,6 @@ const initialCards = [
 
 // console.log(initialCards);
 
-const sectionPhotoPub = document.querySelector('.photo');
-const containerCards = document.querySelector('.photo__pub');
-
-const createCard = ({name, link}) => {
-	return `<div class="photo__pub">
-						<button type="button" class="photo__trash"></button>
-						<img src="./images/photos/kara.png" alt="Фото" class="photo__item">${link}
-						<div class="photo__description">
-								<h2 class="photo__description-text">${name}</h2>
-								<button type="button" class="photo__like"></button>
-						</div>
-					</div>`;
-};
-
-const renderCards = (taskName) => {
-	containerCards.insertAdjacentHTML('beforebegin', createCard(taskName));
-};
-
-initialCards.forEach((title) => {
-	renderCards(title);
-});
-
-const cards = (evt) => {
-	evt.preventDefault();
-	const description = input.value;
-	renderCards(description);
-}
-
-sectionPhotoPub.addEventListener('submit', cards);
 
 const popup = document.querySelector('.popup'); //Всплывающее окно
 const openPopupButton = document.querySelector('.profile__button-edit'); //Кнопка открытия попапа
@@ -69,9 +40,7 @@ const closePopupButtonAddForm = document.querySelector('.popup__button-exit-addf
 
 //const photoSection = document.querySelector('.photo') //Секция с публикациями
 //const publication = document.querySelector('.photo__pub'); // Публикация
-const delPub = document.querySelector('.photo__trash'); // Кнопка удаления
-
-const like = document.querySelectorAll('.photo__like'); // Переключашка для лайков
+const delPub = document.querySelector('.element__close'); // Кнопка удаления
 
 const popupForm = document.querySelector('.popup__form'); //Поле формы
 const nameInput = document.querySelector('.profile__text-name'); //Поле имени
@@ -79,15 +48,26 @@ const jobInput = document.querySelector('.profile__text-career'); //Поле п�
 const nameForm = document.querySelector('.popup__form-name'); // Форма заполнения имени
 const jobForm = document.querySelector('.popup__form-job'); //Форма заполнения профессии
 
+const containerPhoto = document.querySelector('.elements');
 
-// Функция для лайков
+const createCard = (taskName) => {
+	const templateForm = document.querySelector('#template');
+	
+	const element = templateForm.content.querySelector('.element').cloneNode(true); //Клонируем содержимое тега <template>
+	containerPhoto.append(createCard(taskName));
 
-like.forEach(function (el) {
-	el.addEventListener('click', (evt) => {
-		evt.target.classList.toggle('photo__like_active');
-	});
-});
+	return element;
+};
 
+const renderCards = (taskName) => {
+	containerPhoto.append(createCard(taskName));
+};
+
+containerPhoto.append(...initialCards.map((taskName) => {
+	createCard(taskName);
+}));
+
+// sectionPhotoPub.addEventListener('submit', cards);
 
 // Открытие и закрытие попапа
 
@@ -129,8 +109,8 @@ popupForm.addEventListener('submit', formSubmitHandler);
 //         delPub.closest('.photo__pub').remove();
 // });
 
-delPub.forEach(function (el) {
-	el.addEventListener('click', (evt) => {
-		delPub.closest('.photo__pub').remove();
-	});
-});
+// delPub.forEach(function (el) {
+// 	el.addEventListener('click', (evt) => {
+// 		delPub.closest('.photo__pub').remove();
+// 	});
+// });

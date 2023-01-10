@@ -79,41 +79,9 @@
                 </div>
             </div>
         </section> -->
-        
-        <template id="todo-item-template">
-            <!-- <li class="todo-item">
-                <span class="todo-item__text"></span>
-                <button class="todo-item__edit"></button>
-                <button class="todo-item__copy"></button>
-                <button class="todo-item__del"></button>
-            </li> -->
-            <div class="photo__pub">
-                <button type="button" class="photo__trash"></button>
-                <img src="./images/photos/kara.png" alt="Фото" class="photo__item">
-                <div class="photo__description">
-                    <h2 class="photo__description-text">Карачаево-Черкессия</h2>
-                    <button type="button" class="photo__like"></button>
-                </div>
-            </div>
-        </template>
-
-        <section class="todos">
-            <form name="todo-form" class="todo-form"></form>
-            <div class="photo__pub"></div>
-        </section>
 
         <!-- Карточки с местами -->
-
-        <!-- <template class="template">
-            <div class="element">
-              <button class="element__del" type="button"></button>
-              <img class="element__image" alt="">
-              <div class="element__description">
-                <h2 class="element__image-title"></h2>
-                <button class="element__like" type="button"></button>
-              </div>
-            </div>
-        </template> -->
+        <section class="elements"></section>
         
     </main>
     
@@ -157,6 +125,26 @@
         <img src="./images/photos/photo-1672651158520-e2ee88dfd552.avif" alt="Картинка" class="image__item">
         <h4 class="image__subtitle">Карачаевск</h4>
     </div> -->
+
+    <template id="template">
+        <div class="element">
+            <button type="button" class="element__close"></button>
+            <img class="element__photo" alt="">
+            <div class="element__description">
+                <h2 class="element__description-text"></h2>
+                <button type="button" class="element__like"></button>
+            </div>
+        </div>
+
+        <!-- <div class="photo__pub">
+            <button type="button" class="photo__trash element__delete"></button>
+            <img src="./images/photos/kara.png" alt="Фото" class="photo__item element__image">
+            <div class="photo__description">
+                <h2 class="photo__description-text element__image-title"></h2>
+                <button type="button" class="photo__like element__like"></button>
+            </div>
+        </div> -->
+    </template>
 
     <script src="./script/script.js"></script>
 </body>

@@ -1,4 +1,4 @@
-.photo__like_active {
+.element__like_active {
     margin: 0 20px 0 0;
     padding: 0;
     min-height: 19px;
@@ -12,6 +12,6 @@
     border: none;
 }
 
-.photo__like_active:hover {
+.element__like_active:hover {
     opacity: .5;
 }
