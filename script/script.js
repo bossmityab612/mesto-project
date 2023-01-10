@@ -35,8 +35,6 @@ const popupAddForm = document.querySelector('.popup-add-photo'); //Всплыв�
 const openPopupButtonAddForm = document.querySelector('.profile__add-button'); //Кнопка открытия попапа (для формы добавления)
 const closePopupButtonAddForm = document.querySelector('.popup__button-exit-addform'); //Кнопка закрытия попапа
 
-const delPub = document.querySelector('.element__close'); // Кнопка удаления
-
 const popupForm = document.querySelector('.popup__form'); //Поле формы
 const nameInput = document.querySelector('.profile__text-name'); //Поле имени
 const jobInput = document.querySelector('.profile__text-career'); //Поле профессии
@@ -86,16 +84,30 @@ const createCard = (taskName) => {
 	element.querySelector('.element__photo').src = taskName.link;
 	element.querySelector('.element__description-text').textContent = taskName.name;
 	containerPhoto.append(element);
-
+	addLike(element);
+	removeCards(element);
 	return;
 };
 
-const like = document.querySelectorAll('.element__like');
-like.forEach(function(el) {
-	el.addEventListener('click', function(evt) {
-		evt.target.classList.toggle('element__like_active');
+// Функция удаления карточки
+const card = document.querySelector('.element');
+const removeCards = (elem) => {
+	const delCard = elem.querySelector('.element__close');
+	delCard.addEventListener('click', function() {
+		delCard.closest('.element').remove();
 	});
-});
+};
+
+// Функция для лайков
+const addLike = (elem) => {
+	const like = elem.querySelectorAll('.element__like');
+	like.forEach(function(el) {
+		el.addEventListener('click', function(evt) {
+			evt.target.classList.toggle('element__like_active');
+		});
+	});
+};
+
 
 const renderCards = (taskName) => {
 	containerPhoto.append(createCard(taskName));
