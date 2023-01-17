@@ -38,24 +38,41 @@ const closePopupButtonAddForm = document.querySelector('.popup__button-exit-addf
 const popupForm = document.querySelector('.popup__form'); //Поле формы
 const nameInput = document.querySelector('.profile__text-name'); //Поле имени
 const jobInput = document.querySelector('.profile__text-career'); //Поле профессии
+
 const nameForm = document.querySelector('.popup__form-name'); // Форма заполнения имени
 const jobForm = document.querySelector('.popup__form-job'); //Форма заполнения профессии
 
-// Открытие и закрытие попапа
+const titleCard = document.querySelector('.element__description-text'); //Поле названия карточки 
+const linkCard = document.querySelector('.element__photo'); //Поле фотографии в карточке
 
+const titleForm = document.querySelector('.popup__add-title'); // Форма добавления названия карточки
+const linkForm = document.querySelector('.popup__link-image'); // Форма добавления фотографии карточки
+const saveButton = document.querySelector('.popup__create-button'); //Кнопка создания новой карточки
+
+
+// Открытие и закрытие попапа
 openPopupButton.addEventListener('click', () => {
 	popup.classList.add('popup_opened');
 	nameForm.value = nameInput.textContent;
 	jobForm.value = jobInput.textContent;
 });
 
-
 closePopupButton.addEventListener('click', () => {
   popup.classList.remove('popup_opened');
 });
 
-// Открытие и закрытие попапа (форма добавления фото)
+// Обработчик формы изменения профиля
+function formSubmitHandler(evt) {
+	evt.preventDefault();
+	nameInput.textContent = nameForm.value;
+	jobInput.textContent = jobForm.value;
+	
+	popup.classList.remove('popup_opened');
+}
+popupForm.addEventListener('submit', formSubmitHandler);
 
+
+// Открытие и закрытие попапа (форма добавления фото)
 openPopupButtonAddForm.addEventListener('click', () => {
   popupAddForm.classList.add('popup_opened');
 });
@@ -64,39 +81,47 @@ closePopupButtonAddForm.addEventListener('click', () => {
   popupAddForm.classList.remove('popup_opened');
 });
 
-// Обработчик формы
 
-function formSubmitHandler(evt) {
+// Функция добавления карточки
+function createCard(evt) {
 	evt.preventDefault();
+	sectionElements.prepend(newElement);
+	
 	nameInput.textContent = nameForm.value;
 	jobInput.textContent = jobForm.value;
 
 	popup.classList.remove('popup_opened');
+
+	renderCards()
 }
-popupForm.addEventListener('submit', formSubmitHandler);
+popupAddForm.addEventListener('submit', createCard);
 
+
+// Создание карточек на странице через шаблонный тег
 const containerPhoto = document.querySelector('.elements');
-const templateForm = document.querySelector('#template');
+const templateForm = document.querySelector('#template').content.querySelector('.element');
 
-const createCard = (taskName) => {
+const renderCards = (title) => {
 	const templateForm = document.querySelector('#template');
 	const element = templateForm.content.querySelector('.element').cloneNode(true); //Клонируем содержимое тега <template>
-	element.querySelector('.element__photo').src = taskName.link;
-	element.querySelector('.element__description-text').textContent = taskName.name;
+	element.querySelector('.element__photo').src = title.link;
+	element.querySelector('.element__description-text').textContent = title.name;
 	containerPhoto.append(element);
 	addLike(element);
 	removeCards(element);
 	return;
 };
 
+
 // Функция удаления карточки
 const card = document.querySelector('.element');
 const removeCards = (elem) => {
-	const delCard = elem.querySelector('.element__close');
+	const delCard = elem.querySelector('.element__del');
 	delCard.addEventListener('click', function() {
 		delCard.closest('.element').remove();
 	});
 };
+
 
 // Функция для лайков
 const addLike = (elem) => {
@@ -107,29 +132,10 @@ const addLike = (elem) => {
 		});
 	});
 };
-
-
-const renderCards = (taskName) => {
-	containerPhoto.append(createCard(taskName));
-	return containerPhoto;
-};
-
+	
 containerPhoto.append(initialCards.map((taskName) => {
-	createCard(taskName);
+	renderCards(taskName);
 }));
 
-// containerPhoto.addEventListener('submit', element);
+containerPhoto.addEventListener('submit', initialCards);
 
-
-
-// Удаление публикации
-
-// delPub.addEventListener('click', function() {
-//         delPub.closest('.photo__pub').remove();
-// });
-
-// delPub.forEach(function (el) {
-// 	el.addEventListener('click', (evt) => {
-// 		delPub.closest('.photo__pub').remove();
-// 	});
-// });

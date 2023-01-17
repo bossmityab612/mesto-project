@@ -22,7 +22,7 @@
 @import url('../blocks/elements/elements.css');
 @import url('../blocks/element/element.css');
 @import url('../blocks/elements/__photo/element__photo.css');
-@import url('../blocks/elements/__close/element__close.css');
+@import url('../blocks/elements/__del/element__del.css');
 @import url('../blocks/elements/__description/element__description.css');
 @import url('../blocks/elements/__description-text/element__description-text.css');
 @import url('../blocks/elements/__like/element__like.css');
