@@ -2,6 +2,8 @@
     background-image: url('../../../images/Close-Icon.svg');
     background-size: cover;
     position: absolute;
+    top: -36px;
+    right: -36px;
     border: none;
     background-color: transparent;
     cursor: pointer;

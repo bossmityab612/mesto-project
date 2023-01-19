@@ -49,6 +49,12 @@ const titleForm = document.querySelector('.popup__add-title'); // Форма д�
 const linkForm = document.querySelector('.popup__link-image'); // Форма добавления фотографии карточки
 const saveButton = document.querySelector('.popup__create-button'); //Кнопка создания новой карточки
 
+const openPhoto = document.querySelector('.element'); //Сама карточка
+const popupPhotoOpen = document.querySelector('.image'); //Всплывающее окно картинки
+const openPopupButtonPhotoCard = document.querySelector('.element__photo'); //Кнопка открытия попапа с картинкой
+const closePopupButtonPhotoCard = document.querySelector('.popup__button-exit-image'); //Кнопка закрытия попапа
+
+
 
 // Открытие и закрытие попапа
 openPopupButton.addEventListener('click', () => {
@@ -80,6 +86,17 @@ openPopupButtonAddForm.addEventListener('click', () => {
 closePopupButtonAddForm.addEventListener('click', () => {
   popupAddForm.classList.remove('popup_opened');
 });
+
+
+// Открытие и закрытие попапа (Картинка)
+
+// openPopupButtonPhotoCard.addEventListener('click', () => {
+//   popupPhotoOpen.classList.add('popup_opened');
+// });
+
+// closePopupButtonPhotoCard.addEventListener('click', () => {
+//   popupPhotoOpen.classList.remove('popup_opened');
+// });
 
 
 // Функция добавления карточки

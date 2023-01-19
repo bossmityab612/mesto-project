@@ -1,0 +1,14 @@
+.image__item {
+    position: relative;
+    width: 75vw;
+    height: 75vh;
+    object-fit: cover;
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 767px) {
+    .image__item {
+        height: 50vh;
+    }
+}

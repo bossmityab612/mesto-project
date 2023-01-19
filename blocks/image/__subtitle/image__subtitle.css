@@ -1,10 +1,7 @@
 .image__subtitle {
-    border: 1px solid #fff;
-    color: aqua;
-}
-
-@media screen and (max-width: 767px) {
-    .image__subtitle {
-        border: 1px solid red;
-    }
+    color: #fff;
+    font-size: 12px;
+    line-height: 15px;
+    font-style: normal;
+    font-weight: 400;
 }

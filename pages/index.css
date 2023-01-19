@@ -46,3 +46,5 @@
 @import url('../blocks/image/image.css');
 @import url('../blocks/image/__subtitle/image__subtitle.css');
 @import url('../blocks/image/__button-exit-image/popup__button-exit-image.css');
+@import url('../blocks/image/__item/image__item.css');
+@import url('../blocks/image/__block/image__block.css');

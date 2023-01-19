@@ -1,20 +1,14 @@
 .image {
     position: fixed;
-    display: flex;
-    margin: 0 auto;
-    flex-direction: column;
-    /* justify-content: center; */
     top: 0;
     left: 0;
-    max-width: 75vw;
-    max-height: 75vh;
     width: 100%;
-    object-fit: contain;
-    border: 1px solid #fff;
-}
-
-@media screen and (max-width: 767px) {
-    .image {
-        border: 1px solid red;
-    }
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, .9);
+    opacity: 0;
+    visibility: hidden;
+    /* z-index: 9999; */
 }
